@@ -1,0 +1,28 @@
+<!-- Changing of element : prepend example-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    
+</head>
+
+<body>
+    <p>Changing of element : append; by dhanshree & vijayalaxmi</p>
+    <button>Change Image</button>
+    <div id="mydiv">This is a Paragraph</div><br>
+
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#mydiv").prepend("<img src='rwd5.jpg' />"); //prepend
+            });
+        });
+    </script>
+</body>
+
+</html>

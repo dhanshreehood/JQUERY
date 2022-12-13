@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Dhanshree Hood(27583) | Assignment 2 - Jquery - background-color changing</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<style>
+    #div1{
+        background-color: rgb(253, 253, 253);
+        height: 845px;
+        width: 1250px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-size: larger;
+    }
+</style>
+</head>
+<body>
+    <div id="div1">
+        Click on the Page to change the background color !
+    </div>
+    <script>
+        $(document).ready(function() {
+            $("#div1").click( function(){
+                $("#div1").css("background-color", "green");
+            });
+        });
+    </script>
+</body>
+</html>

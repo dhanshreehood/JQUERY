@@ -1,0 +1,34 @@
+<!-- Changing of element : append example by using css-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <style>
+        #mydiv {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p>Changing of element : append; by dhanshree & vijayalaxmi</p>
+    <button>Change Image</button>
+    <div id="mydiv">This is a Paragraph</div>
+
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#mydiv").append("This a paragraph after append!"); //append
+            });
+        });
+    </script>
+</body>
+
+</html>

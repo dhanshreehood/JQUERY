@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Dhanshree Hood(27583) | Assignment 3 - Drag & Drop</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/
+       themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <style type="text/css">
+        #drag {
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin: 10px;
+            background-image: url("orange.jpeg");
+            padding: 30px;
+            color: white;
+        }
+
+        #drop {
+            width: 500px;
+            height: 500px;
+            float: left;
+            margin: 10px;
+            background-color: rgb(178, 222, 243);
+            padding: 10px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js">
+    </script>
+    <script>
+        $(function () {
+            $("#drag").draggable();
+            $("#drop").droppable(
+                {
+                    drop: function () {
+                        alert("I am dropped");
+                    }
+                });
+        });
+    </script>
+</head>
+
+<body>
+    <center>
+        <h2>Dhanshree Hood(27583) | Assignment 3 - Drag & Drop</h2>
+        <div id="drag">
+            <p>Drag Me</p>
+        </div>
+
+        <div id="drop">
+            <p>Drop On Me</p>
+        </div>
+    </center>
+</body>
+
+</html>

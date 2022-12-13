@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <img class="lbl" src="jq founder.jfif"><br>
+    <button id="slideup">slideup</button>
+    <button id="slideDown">slideDown</button>
+
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js">// code.jquery
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('#slideup').click(function () {
+                $(".lbl").slideUp();//slideUp function
+            });
+
+            $('#slideDown').click(function () {
+                $(".lbl").slideDown();//slideDown function
+            });
+        });
+    </script>
+</body>
+-
+</html>

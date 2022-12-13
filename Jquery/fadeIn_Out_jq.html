@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <p>I am Paragraph!!!</p>
+    <button id="FadeInBtn">Fade In</button>
+    <button id="FadeOutBtn">Fade Out</button>
+    <div id="lbl1">
+        Dhanshree Hood & Vijayalaxmi Yelchalwar.
+    </div>
+    <label class="lbl2">Example of FadeIn, FadeOut Function!!!</label>
+    <p class="lbl3">Example of FadeIn, FadeOut Function!!!</p>
+
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js">// code.jquery
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('#FadeInBtn').click(function () {
+                $("#lbl1").fadeIn(2800);//fadein function
+                $(".lbl2").fadeIn(2500);//fadein function
+                $(".lbl3").fadeIn(2500);//fadein function
+            });
+
+            $('#FadeOutBtn').click(function () {
+                $("#lbl1").fadeOut(2000);//fadeout function
+                $(".lbl3").fadeOut(3200);//fadeout function
+            });
+        });
+    </script>
+</body>
+
+</html>

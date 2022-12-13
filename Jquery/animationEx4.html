@@ -1,0 +1,33 @@
+<!-- image hover -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <img src="jq founder.jfif" alt="founder_img">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"> //code.jquery    
+    </script>
+
+    <!-- mouseenter mouseleave -->
+    <script>
+        $(document).ready(function () {
+            $("img").mouseenter(function () {
+                $("img").css("height", "800px");
+            });
+            $("img").mouseleave(function () {
+                $("img").css("height", "50px");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

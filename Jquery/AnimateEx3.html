@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1 {
+            background-color: red;
+            width: 300px;
+            height: 300px;
+            position: absolute;
+        }
+
+        #div2 {
+            background-color: black;
+            width: 300px;
+            height: 300px;
+            right: "0";
+            position: absolute;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p>Animation Method</p><br>
+    <button id="btn1">Perform Animation</button><br>
+
+    <div>
+        <p id="div1"></p>
+        <p id="div2"></p>
+    </div>
+
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js">// code.jquery
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("#div1").animate({
+                    right: "0",
+
+                }, 2000, function () {
+                    $("#div1").css("background-color", "black");
+                });
+
+                $("#div2").animate({
+                    left: "0",
+
+                }, 2000, function () {
+                    $("#div2").css("background-color", "red");
+                });
+            });
+
+        });
+
+    </script>
+</body>
+
+</html>

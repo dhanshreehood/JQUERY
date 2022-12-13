@@ -1,0 +1,32 @@
+<!-- using "on" method u can use multuiple method: -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+</head>
+<body>
+
+    <p>This is a paragraph for on method!</p>
+
+    <script>
+        $(document).ready(function(){
+            $("p").on({                                       //on method
+                mouseenter: function(){
+                    $(this).css("background-color", "blue");
+                },
+                mouseleave: function(){
+                    $(this).css("background-color", "magenta");
+                },
+                click: function(){
+                    $(this).css("background-color", "yellow");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

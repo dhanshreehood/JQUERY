@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhanshree Hood(27583) | Assignment 1 - Jquery - Image Slider(Random)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+    h2{
+        color: rgb(197, 72, 41);
+    }
+    #slider {
+        width: 720px;
+        height: 400px;
+        overflow: hidden;
+    }
+
+    #slider #slides {
+        display: block;
+        width: 2880px;
+        height: 400px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #slider .slide {
+        float: left;
+        list-style: none;
+        height: 400px;
+        width: 720px;
+    }
+
+    #slider .slide img {
+        width: 100%;
+    }
+    </style>
+
+</head>
+
+<body>
+    <h2>Assignment-1-Jquery | Workshop | Dhanshree Hood & Vijayalaxmi Yelchalwar</h2>
+    <div id="slider">
+        <ul id="slides"> 
+            <li class="slide"><img src="Lemon2.jpeg"></li>
+            <li class="slide"><img src="orange.jpeg"></li>
+            <li class="slide"><img src="w3.jpeg"></li>          
+        </ul>     
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"> //code.jquery    
+    </script>
+    
+    <script>
+        $(document).ready(function() {
+
+//INDEX IMAGES SLIDER
+    $(function() {
+
+		//configuration
+		var width = 720;
+		var speed = 1000;
+		var pause = 3000;
+		var current = 1;
+
+		//cache DOM
+		var $slider = $('#slider');
+		var $slides = $slider.find('#slides');
+		var $slide = $slides.find('.slide');
+
+
+	setInterval(function() {
+	    $slides.animate({'margin-left': '-='+width}, speed, function() {
+			current++;
+			if (current === $slide.length)  {
+				current = 1;
+				$slides.css('margin-left', 0);
+			}
+		});			
+	}, pause);
+    });
+});
+    </script>
+</body>
+</html>
